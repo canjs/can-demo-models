@@ -15,16 +15,16 @@ const Todo = DefineMap.extend("Todo",{
 
 restModel({
 	Map: Todo,
-	List: DefineList.extend({"#": Todo}),
+	List: DefineList.extend({"#": Todo}), // we can remove this
 	url: "/api/todos/{id}"
 });
 
 Component.extend({
 	tag: "todo-list",
 	view: `
-    {{#each todosPromise.value}}
-      <li>{{name}}</li>
-    {{/each}}
+        {{#each todosPromise.value}}
+          <li>{{name}}</li>
+        {{/each}}
     `,
 	ViewModel: {
 		todosPromise: {
@@ -66,7 +66,4 @@ Component.extend({
         }
     }
 })
-
-
-
 </script>
