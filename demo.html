@@ -1,0 +1,72 @@
+<my-app></my-app>
+
+<script type="module">
+import todosFixture from "./index.mjs";
+todosFixture(20);
+
+import { DefineMap, Component, route, restModel, DefineList } from "//unpkg.com/can@5/core.mjs";
+
+const Todo = DefineMap.extend("Todo",{
+	id: {identity: true, type: "number"},
+	name: "string",
+	complete: "boolean",
+	dueDate: "date"
+});
+
+restModel({
+	Map: Todo,
+	List: DefineList.extend({"#": Todo}),
+	url: "/api/todos/{id}"
+});
+
+Component.extend({
+	tag: "todo-list",
+	view: `
+    {{#each todosPromise.value}}
+      <li>{{name}}</li>
+    {{/each}}
+    `,
+	ViewModel: {
+		todosPromise: {
+			default(){
+				return Todo.getList();
+			}
+		}
+	}
+});
+
+Component.extend({
+    tag: "home-page",
+    view: `
+        <h1>Hello World</h1>
+    `
+});
+
+route.register("{page}", {page: "home"})
+
+Component.extend({
+    tag: "my-app",
+    view: `
+
+        {{# eq(routeData.page, "home") }}
+            <a href="{{ routeUrl(page='todos') }}">todos</a>
+            <home-page/>
+        {{ else }}
+            <a href="{{ routeUrl(page='home') }}">home</a>
+            <todo-list/>
+        {{/ eq}}
+    `,
+    ViewModel: {
+        routeData: {
+            default(){
+                route.data = new DefineMap();
+                route.start();
+                return route.data;
+            }
+        }
+    }
+})
+
+
+
+</script>

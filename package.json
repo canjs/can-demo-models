@@ -1,0 +1,22 @@
+{
+  "name": "todos-fixture",
+  "version": "1.0.0",
+  "description": "A mock todos service",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canjs/todos-fixture.git"
+  },
+  "keywords": [
+    "canjs"
+  ],
+  "author": "Justin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canjs/todos-fixture/issues"
+  },
+  "homepage": "https://github.com/canjs/todos-fixture#readme"
+}
