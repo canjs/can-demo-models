@@ -1,4 +1,4 @@
-import {DefineMap} from "//unpkg.com/can@5/core.mjs";
+import {DefineMap, DefineList} from "//unpkg.com/can@5/core.mjs";
 
 // -------------------------------
 // Define an observable Todo type:
