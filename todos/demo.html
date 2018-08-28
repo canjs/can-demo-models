@@ -1,23 +1,11 @@
 <my-app></my-app>
 
 <script type="module">
-import todosFixture from "./index.mjs";
-todosFixture(20);
+import Todo from "./todo-all.mjs";
 
 import { DefineMap, Component, route, restModel, DefineList } from "//unpkg.com/can@5/core.mjs";
 
-const Todo = DefineMap.extend("Todo",{
-	id: {identity: true, type: "number"},
-	name: "string",
-	complete: "boolean",
-	dueDate: "date"
-});
 
-restModel({
-	Map: Todo,
-	List: DefineList.extend({"#": Todo}), // we can remove this
-	url: "/api/todos/{id}"
-});
 
 Component.extend({
 	tag: "todo-list",
