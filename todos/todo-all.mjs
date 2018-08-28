@@ -3,9 +3,11 @@ import Todo from "./todo.mjs";
 import TodoList from "./todo-list.mjs";
 import TodoFixture from "./todo-fixture.mjs";
 
+Todo.List = TodoList;
+
 Todo.connection = restModel({
     Map: Todo,
-    List: TodoList,
+    List: Todo.List,
     url: "/api/todos/{id}"
 });
 
