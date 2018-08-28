@@ -1,14 +1,14 @@
 {
-  "name": "todos-fixture",
-  "version": "1.0.0",
-  "description": "A mock todos service",
+  "name": "can-demo-models",
+  "version": "5.0.0",
+  "description": "A collection of useful models to be used in demos on the CanJS docs",
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/canjs/todos-fixture.git"
+    "url": "git+https://github.com/canjs/can-demo-models.git"
   },
   "keywords": [
     "canjs"
@@ -16,7 +16,7 @@
   "author": "Justin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/canjs/todos-fixture/issues"
+    "url": "https://github.com/canjs/can-demo-models/issues"
   },
-  "homepage": "https://github.com/canjs/todos-fixture#readme"
+  "homepage": "https://github.com/canjs/can-demo-models#readme"
 }
