@@ -55,4 +55,16 @@ const Todo = DefineMap.extend("Todo",{
     }
 });
 
+Todo.List = DefineList.extend("TodoList",{
+
+    // Specify the behavior of items in the TodoList
+    "#": {Type: Todo},
+
+    // Create a computed `complete` property
+    get complete(){
+        // Filter all complete todos
+        return this.filter({complete: true});
+    }
+});
+
 export default Todo;
