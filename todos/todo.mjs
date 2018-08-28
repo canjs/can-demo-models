@@ -42,13 +42,6 @@ const Todo = DefineMap.extend("Todo",{
             last: "string"
         }
     },
-	// `tags` is an observable list of items that
-	// defaults to including "new"
-	tags: {
-		default(){
-			return ["new"]
-		}
-	},
     // `toggleComplete` is a method
     toggleComplete(){
         this.complete != this.complete;
