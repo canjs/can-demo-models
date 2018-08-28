@@ -1,4 +1,4 @@
-import {DefineMap} from "//unpkg.com/can@5/core.mjs";
+import {DefineMap, DefineList} from "//unpkg.com/can@5/core.mjs";
 
 // -------------------------------
 // Define an observable Todo type:
@@ -52,6 +52,18 @@ const Todo = DefineMap.extend("Todo",{
     // `toggleComplete` is a method
     toggleComplete(){
         this.complete != this.complete;
+    }
+});
+
+Todo.List = DefineList.extend("TodoList",{
+
+    // Specify the behavior of items in the TodoList
+    "#": {Type: Todo},
+
+    // Create a computed `complete` property
+    get complete(){
+        // Filter all complete todos
+        return this.filter({complete: true});
     }
 });
 
