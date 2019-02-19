@@ -1,6 +1,6 @@
 {
   "name": "can-demo-models",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "description": "A collection of useful models to be used in demos on the CanJS docs",
   "main": "index.mjs",
   "scripts": {
