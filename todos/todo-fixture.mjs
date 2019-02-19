@@ -2,7 +2,7 @@ import {fixture, QueryLogic, MaybeDate, MaybeNumber, MaybeString, MaybeBoolean} 
 
 export default function todoFixture(count){
     var terms = ["can you","please","","","",""],
-        verbs = ["clean","walk","do","vaccum","organize","fold","wash","dust","pay","cook","get","take out"],
+        verbs = ["clean","walk","do","vacuum","organize","fold","wash","dust","pay","cook","get","take out"],
         subjects = ["dog","laundry","diapers","clothes","car","windows","carpet","taxes","food","gas","trash"];
 
     var dayInMS = 24*60*60*1000;
