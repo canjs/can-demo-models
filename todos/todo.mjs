@@ -8,6 +8,14 @@ import {
 // Define an observable Todo type:
 // -------------------------------
 
+// The custom Owner type used in Person's owner property definition.
+class Owner extends ObservableObject {
+	static props = {
+		first: String,
+		last: String
+	};
+}
+
 class Todo extends ObservableObject {
 	static props = {
 		// `id` is a Number and uniquely identifies instances of this type.
@@ -56,14 +64,6 @@ class Todo extends ObservableObject {
 	toggleComplete() {
 		this.complete != this.complete;
 	}
-}
-
-// The custom Owner type used in Person's owner property definition.
-class Owner extends ObservableObject {
-	static props = {
-		first: String,
-		last: String
-	};
 }
 
 Todo.List = class TodoList extends ObservableArray {
