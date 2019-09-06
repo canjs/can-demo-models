@@ -66,7 +66,7 @@ class Todo extends ObservableObject {
 	}
 }
 
-Todo.List = class TodoList extends ObservableArray {
+export class TodoList extends ObservableArray {
 	// Specify the behavior of items in the TodoList
 	static items = type.convert(Todo);
 
