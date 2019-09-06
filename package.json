@@ -4,6 +4,11 @@
   "description": "A collection of useful models to be used in demos on the CanJS docs",
   "main": "index.mjs",
   "scripts": {
+    "postpublish": "git push --tags && git push",
+    "release:major": "npm version major && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:patch": "npm version patch && npm publish",
+    "release:pre": "npm version prerelease && npm publish --tag pre",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
